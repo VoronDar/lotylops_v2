@@ -1,5 +1,8 @@
-package com.astery.lotylops.model
+package com.astery.lotylops.model.appValues
 
+/**
+ * learning sections
+ * */
 enum class Branch{
     Vocabulary,
     Phraseology,

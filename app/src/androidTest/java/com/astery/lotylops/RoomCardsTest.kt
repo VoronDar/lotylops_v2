@@ -3,7 +3,7 @@ package com.astery.lotylops
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.astery.lotylops.model.Branch
+import com.astery.lotylops.model.appValues.Branch
 import com.astery.lotylops.repository.localDataStorage.cardStorage.CardStorage
 import com.astery.lotylops.repository.localDataStorage.dao.CardDao
 import com.astery.lotylops.repository.localDataStorage.database.AppDatabase
@@ -209,7 +209,7 @@ class RoomCardsTest {
 
     /** run should be used to write a test itself */
     interface CardTestRunnable{
-        suspend fun run(dao:CardStorage, branch:Branch)
+        suspend fun run(dao:CardStorage, branch: Branch)
     }
 
 }

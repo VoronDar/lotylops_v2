@@ -14,4 +14,9 @@ class GrammarStorageTest:GrammarStorage(), CardStorageTest {
         return GrammarCard(id, "smt", 2, 3,4,
             null, true, "wrd", "null")
     }
+
+    override fun getCardForCourse(id: String, courseId: String): Card {
+        return GrammarCard(id, courseId, 2, 3,4,
+            null, true, "wrd", "null")
+    }
 }

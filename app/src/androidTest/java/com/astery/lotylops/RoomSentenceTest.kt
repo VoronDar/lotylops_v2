@@ -3,13 +3,8 @@ package com.astery.lotylops
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
-import com.astery.lotylops.model.Branch
-import com.astery.lotylops.repository.localDataStorage.cardStorage.CardStorage
-import com.astery.lotylops.repository.localDataStorage.dao.CardDao
 import com.astery.lotylops.repository.localDataStorage.dao.SentenceDao
 import com.astery.lotylops.repository.localDataStorage.database.AppDatabase
-import com.astery.lotylops.roomCardsHelpers.CardStorageTest
-import com.astery.lotylops.roomCardsHelpers.CardStorageTestFactory
 import com.astery.lotylops.roomSentenceHelpers.SentenceHelper
 import junit.framework.TestCase.assertTrue
 import kotlinx.coroutines.launch

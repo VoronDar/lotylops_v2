@@ -5,7 +5,7 @@ import com.astery.lotylops.model.entities.VocabularyCard
 
 open class VocabularyStorage:CardStorage(){
     override suspend fun getCardsForToday(today: Int): List<Card> {
-        return cardDao.getVocabularyCardsForToday(today)
+        return cardDao.getVocabularyCardsForTodayForStudy(today)
     }
 
     override suspend fun getCardsForCourse(courseId: String): List<Card> {

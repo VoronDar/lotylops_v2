@@ -1,6 +1,6 @@
 package com.astery.lotylops.roomCardsHelpers
 
-import com.astery.lotylops.model.Branch
+import com.astery.lotylops.model.appValues.Branch
 import com.astery.lotylops.repository.localDataStorage.cardStorage.CardStorage
 
 object CardStorageTestFactory {

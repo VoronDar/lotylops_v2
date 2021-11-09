@@ -14,4 +14,9 @@ class CultureStorageTest: CultureStorage(), CardStorageTest {
         return CultureCard(id, "smt", 2, 3,4,
             null, true, "wrd")
     }
+
+    override fun getCardForCourse(id: String, courseId: String): Card {
+        return CultureCard(id, courseId, 2, 3,4,
+            null, true, "wrd")
+    }
 }

@@ -14,4 +14,9 @@ class ExceptionStorageTest: ExceptionStorage(), CardStorageTest {
         return ExceptionCard(id, "smt", 2, 3,4,
             null, true, "wrd", "null")
     }
+
+    override fun getCardForCourse(id: String, courseId: String): Card {
+        return ExceptionCard(id, courseId, 2, 3,4,
+            null, true, "wrd", "null")
+    }
 }

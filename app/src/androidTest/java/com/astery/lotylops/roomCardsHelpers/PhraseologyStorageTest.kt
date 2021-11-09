@@ -16,4 +16,10 @@ class PhraseologyStorageTest:PhraseologyStorage(), CardStorageTest {
             null, true, "wrd", "null", "null", null,
             null, "asd", "asdsad", "asdasdas", 2, 3)
     }
+
+    override fun getCardForCourse(id: String, courseId: String): Card {
+        return PhraseologyCard(id, courseId, 2, 3,4,
+            null, true, "wrd", "null", "null", null,
+            null, "asd", "asdsad", "asdasdas", 2, 3)
+    }
 }

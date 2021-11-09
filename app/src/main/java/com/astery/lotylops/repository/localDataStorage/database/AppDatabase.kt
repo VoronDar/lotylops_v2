@@ -6,13 +6,16 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import com.astery.lotylops.model.entities.*
 import com.astery.lotylops.repository.localDataStorage.dao.CardDao
+import com.astery.lotylops.repository.localDataStorage.dao.CourseDao
 import com.astery.lotylops.repository.localDataStorage.dao.SentenceDao
 
 @Database(entities = [VocabularyCard::class, PhraseologyCard::class, GrammarCard::class, ExceptionCard::class,
-                     PhoneticsCard::class, CultureCard::class, Sentence.Example::class, Sentence.Train::class, SelectTrain::class], version = 1)
+                     PhoneticsCard::class, CultureCard::class, Sentence.Example::class, Sentence.Train::class, SelectTrain::class,
+                     Course::class], version = 1)
 abstract class AppDatabase: RoomDatabase(){
     abstract fun getCardDao(): CardDao
     abstract fun getSentenceDao(): SentenceDao
+    abstract fun getCourseDao(): CourseDao
 
     companion object{
         @Volatile
@@ -20,7 +23,7 @@ abstract class AppDatabase: RoomDatabase(){
 
         fun getDatabase(context: Context): AppDatabase {
             return INSTANCE ?: synchronized(this) {
-                val instance = Room.databaseBuilder(context, AppDatabase::class.java, "databa")
+                val instance = Room.databaseBuilder(context, AppDatabase::class.java, "databas")
                     .fallbackToDestructiveMigration()
                     .build()
                 instance

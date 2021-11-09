@@ -9,8 +9,11 @@ import com.astery.lotylops.model.entities.*
 
 @Dao
 interface CardDao {
-    @Query("SELECT * FROM VOCABULARYCARD WHERE repetitionDate <= :today ORDER BY practiceLevel")
-    suspend fun getVocabularyCardsForToday(today:Int):List<VocabularyCard>
+    @Query("SELECT * FROM VOCABULARYCARD WHERE repetitionDate <= :today AND repeatLevel == -100")
+    suspend fun getVocabularyCardsForTodayForStudy(today:Int):List<VocabularyCard>
+
+    @Query("SELECT * FROM VOCABULARYCARD WHERE repetitionDate <= :today AND repeatLevel > -10")
+    suspend fun getVocabularyCardsForTodayForRemember(today:Int):List<VocabularyCard>
 
     @Query("SELECT * FROM VOCABULARYCARD WHERE course == :courseId ORDER BY id")
     suspend fun getVocabularyCardsForCourse(courseId:String):List<VocabularyCard>

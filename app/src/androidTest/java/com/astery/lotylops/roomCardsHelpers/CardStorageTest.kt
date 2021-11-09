@@ -8,5 +8,6 @@ import com.astery.lotylops.model.entities.Card
  * */
 interface CardStorageTest {
     fun getCardForInsert(id:String): Card
+    fun getCardForCourse(id:String, courseId:String): Card
     fun getCardForUpdate(id:String): Card
 }

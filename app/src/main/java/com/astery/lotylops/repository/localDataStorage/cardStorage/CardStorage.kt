@@ -1,6 +1,6 @@
 package com.astery.lotylops.repository.localDataStorage.cardStorage
 
-import com.astery.lotylops.model.Branch
+import com.astery.lotylops.model.appValues.Branch
 import com.astery.lotylops.model.entities.Card
 import com.astery.lotylops.repository.localDataStorage.dao.CardDao
 import javax.inject.Inject

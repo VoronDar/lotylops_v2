@@ -14,4 +14,9 @@ class PhoneticsStorageTest: PhoneticsStorage(), CardStorageTest {
         return PhoneticsCard(id, "smt", 2, 3,4,
             null, true, "wrd", "null", null, null)
     }
+
+    override fun getCardForCourse(id: String, courseId: String): Card {
+        return PhoneticsCard(id, courseId, 2, 3,4,
+            null, true, "wrd", "null", null, null)
+    }
 }

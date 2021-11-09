@@ -45,15 +45,16 @@ android {
         jvmTarget = '1.8'
     }
 
+    kapt {
+        correctErrorTypes = true
+    }
+
     buildFeatures{
         dataBinding = true
     }
 
-    kapt {
-        correctErrorTypes = true
-    }
-}
 
+}
 dependencies {
 
     implementation 'androidx.core:core-ktx:1.7.0'
